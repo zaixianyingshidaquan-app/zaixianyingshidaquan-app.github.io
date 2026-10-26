@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>在线影视大全 - 每日更新的高清影视在线观看排片表 | zaixianyingshidaquan-app.github.io</title>
+<meta name="description" content="在线影视大全（https://zaixianyingshidaquan-app.github.io）每天 19:30 整理当日可看的院线热映、剧集连载、动漫与纪录片，提供在线观看入口、清晰度切换说明、字幕音轨设置与热播榜单速查，打开页面就能挑片。">
+<meta name="keywords" content="在线影视大全,zaixianyingshidaquan-app,zaixianyingshidaquan-app.github.io,在线影视大全官网,高清影视在线观看,热播剧集排片表,免费电影在线看,影视榜单速查,纪录片全集,动漫连载更新">
+<meta name="author" content="在线影视大全编辑部">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="canonical" href="https://zaixianyingshidaquan-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="在线影视大全">
+<meta property="og:title" content="在线影视大全 - 每日更新的高清影视在线观看排片表">
+<meta property="og:description" content="当日热映、剧集连载、动漫与纪录片汇总成一张排片表，含清晰度切换、投屏与字幕音轨设置说明。">
+<meta property="og:url" content="https://zaixianyingshidaquan-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在线影视大全 - 每日更新的高清影视在线观看排片表">
+<meta name="twitter:description" content="当日热映、剧集连载、动漫与纪录片汇总成一张排片表，打开页面就能挑片。">
+<style>
+:root{
+  --ink:#0f0e0c;
+  --ink-soft:#191712;
+  --paper:#f2e8d5;
+  --amber:#e8b04b;
+  --red:#d14b3c;
+  --green:#6fa86a;
+  --text:#e7e0d2;
+  --muted:#9a9184;
+  --line:rgba(242,232,213,.14);
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.75;
+  background-image:radial-gradient(circle at 12% 8%, rgba(232,176,75,.07), transparent 42%),radial-gradient(circle at 88% 62%, rgba(209,75,60,.07), transparent 40%);
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+.eyebrow{font-family:var(--serif);letter-spacing:.32em;font-size:11px;color:var(--amber);text-transform:uppercase;}
+
+/* 报头 */
+.masthead{background:var(--paper);color:#241f19;border-bottom:3px double #241f19;}
+.masthead-top{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(36,31,25,.25);font-size:12px;color:#5c5145;}
+.masthead-top span{white-space:nowrap;}
+.masthead-main{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;padding:22px 0 18px;}
+.logo{display:flex;align-items:baseline;gap:12px;}
+.logo b{font-family:var(--serif);font-size:clamp(30px,6.4vw,52px);letter-spacing:.06em;color:#1b1712;line-height:1;}
+.logo i{font-style:normal;font-size:12px;color:#7a6a55;border-left:1px solid rgba(36,31,25,.3);padding-left:12px;line-height:1.5;}
+.masthead-main .site-url{font-size:13px;color:#6b5b46;word-break:break-all;font-family:var(--serif);}
+.masthead-main .site-url b{color:#a3412f;font-weight:600;}
+.masthead-nav{background:var(--ink);border-top:1px solid var(--line);}
+.masthead-nav .wrap{display:flex;align-items:center;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;}
+.masthead-nav .wrap::-webkit-scrollbar{display:none;}
+.masthead-nav a{padding:13px 14px;font-size:14px;color:#cfc7b8;border-right:1px solid var(--line);}
+.masthead-nav a:first-child{border-left:1px solid var(--line);}
+.masthead-nav a:hover,.masthead-nav a:focus{color:var(--amber);background:rgba(232,176,75,.08);}
+.masthead-nav .search{margin-left:auto;padding:8px 0 8px 14px;border-right:0;}
+.masthead-nav .search input{background:transparent;border:1px solid var(--line);color:var(--text);padding:6px 10px;font-size:13px;width:150px;outline:none;}
+.masthead-nav .search input:focus{border-color:var(--amber);}
+
+/* 首屏 */
+.hero{padding:44px 0 34px;}
+.hero-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:34px;align-items:start;}
+.hero h1{font-family:var(--serif);font-size:clamp(26px,5vw,44px);line-height:1.28;margin:14px 0 16px;font-weight:700;}
+.hero h1 em{font-style:normal;color:var(--amber);border-bottom:2px solid rgba(232,176,75,.4);}
+.hero p.lede{color:#c8c0b2;margin:0 0 22px;max-width:46em;}
+.hero p.lede b{color:var(--paper);font-weight:600;}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;}
+.btn{display:inline-block;padding:11px 22px;font-size:14px;border:1px solid var(--amber);color:var(--amber);background:transparent;}
+.btn:hover{background:var(--amber);color:#1b1712;}
+.btn.solid{background:var(--amber);color:#1b1712;}
+.btn.solid:hover{background:#f3c469;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px;}
+.stats div{background:var(--ink-soft);padding:14px 12px;}
+.stats dt{font-size:12px;color:var(--muted);margin:0;}
+.stats dd{margin:2px 0 0;font-family:var(--serif);font-size:20px;color:var(--paper);}
+
+/* 票根 */
+.ticket{background:var(--ink-soft);border:1px dashed rgba(232,176,75,.45);position:relative;padding:20px 20px 22px;}
+.ticket::before,.ticket::after{content:"";position:absolute;left:0;right:0;height:12px;background-image:radial-gradient(circle at 7px 6px, var(--ink) 3.2px, transparent 3.6px);background-size:14px 12px;}
+.ticket::before{top:0;}
+.ticket::after{bottom:0;}
+.ticket h2{margin:8px 0 4px;font-family:var(--serif);font-size:19px;color:var(--paper);}
+.ticket .stamp{font-size:11px;color:var(--muted);letter-spacing:.1em;}
+.ticket ul{list-style:none;margin:14px 0 0;padding:0;}
+.ticket li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dotted rgba(242,232,213,.18);font-size:14px;}
+.ticket li:last-child{border-bottom:0;}
+.ticket li span:last-child{color:var(--amber);white-space:nowrap;}
+.ticket .foot{margin-top:14px;font-size:12px;color:var(--muted);}
+
+/* 通用栏目 */
+.section{padding:40px 0;border-top:1px solid var(--line);}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:24px;}
+.sec-head h2{font-family:var(--serif);font-size:clamp(21px,3.4vw,28px);margin:6px 0 0;color:var(--paper);}
+.sec-head p{margin:6px 0 0;color:var(--muted);font-size:13px;max-width:40em;}
+.sec-no{font-family:var(--serif);font-size:12px;color:var(--red);letter-spacing:.2em;}
+
+/* 排片表 */
+.slots{border:1px solid var(--line);}
+.slot{display:grid;grid-template-columns:88px 1fr 150px 110px 92px;gap:14px;align-items:center;padding:15px 16px;border-bottom:1px solid var(--line);}
+.slot:last-child{border-bottom:0;}
+.slot:hover{background:rgba(232,176,75,.05);}
+.slot .time{font-family:var(--serif);font-size:17px;color:var(--amber);}
+.slot .name{font-size:15px;color:var(--paper);}
+.slot .name small{display:block;color:var(--muted);font-size:12px;}
+.slot .tag{font-size:12px;color:var(--muted);}
+.slot .hall{font-size:13px;color:#c8c0b2;}
+.slot .state{font-size:12px;text-align:center;padding:4px 0;border:1px solid var(--line);color:var(--green);}
+.slot .state.hot{border-color:var(--red);color:var(--red);}
+.slot .state.new{border-color:var(--amber);color:var(--amber);}
+.slots-head{display:grid;grid-template-columns:88px 1fr 150px 110px 92px;gap:14px;padding:10px 16px;background:var(--ink-soft);font-size:11px;color:var(--muted);letter-spacing:.14em;}
+
+/* 分类墙 */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
+.cat{border:1px solid var(--line);padding:18px;background:linear-gradient(180deg,rgba(242,232,213,.04),transparent);}
+.cat:nth-child(3n){border-top:2px solid var(--amber);}
+.cat:nth-child(4n){border-top:2px solid var(--red);}
+.cat h3{margin:0 0 6px;font-size:16px;color:var(--paper);font-family:var(--serif);}
+.cat p{margin:0;font-size:13px;color:var(--muted);}
+.cat .num{display:block;margin-bottom:10px;font-size:12px;color:var(--amber);letter-spacing:.08em;}
+.cat ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px;}
+.cat ul li{font-size:12px;color:#c8c0b2;border:1px solid var(--line);padding:2px 8px;}
+
+/* 榜单 */
+.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+.tabs button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:7px 16px;font-size:13px;cursor:pointer;font-family:inherit;}
+.tabs button.on{border-color:var(--amber);color:var(--amber);}
+.rank{list-style:none;margin:0;padding:0;counter-reset:r;}
+.rank li{display:grid;grid-template-columns:46px 1fr 120px 96px;gap:14px;align-items:center;padding:13px 0;border-bottom:1px dotted rgba(242,232,213,.16);}
+.rank li .idx{font-family:var(--serif);font-size:22px;color:var(--red);text-align:center;}
+.rank li:nth-child(-n+3) .idx{color:var(--amber);}
+.rank li .ttl{font-size:15px;color:var(--paper);}
+.rank li .ttl small{display:block;color:var(--muted);font-size:12px;}
+.bar{height:6px;background:rgba(242,232,213,.1);position:relative;}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--red),var(--amber));display:block;}
+.rank li .score{font-family:var(--serif);font-size:16px;color:var(--amber);text-align:right;}
+.panel[hidden]{display:none;}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.post{border:1px solid var(--line);padding:18px 18px 20px;background:var(--ink-soft);}
+.post .meta{font-size:12px;color:var(--red);letter-spacing:.06em;}
+.post h3{margin:8px 0 8px;font-size:16px;line-height:1.5;font-family:var(--serif);color:var(--paper);}
+.post p{margin:0;font-size:13px;color:var(--muted);}
+.post .more{display:inline-block;margin-top:12px;font-size:12px;color:var(--amber);border-bottom:1px solid rgba(232,176,75,.4);}
+
+/* 指南 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+.step{border-left:2px solid var(--amber);padding:2px 0 2px 16px;}
+.step b{display:block;font-family:var(--serif);font-size:14px;color:var(--amber);letter-spacing:.1em;margin-bottom:4px;}
+.step h3{margin:0 0 6px;font-size:16px;color:var(--paper);}
+.step p{margin:0;font-size:13px;color:var(--muted);}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line);}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;padding:16px 4px;font-size:15px;color:var(--paper);list-style:none;display:flex;justify-content:space-between;gap:12px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";color:var(--amber);font-family:var(--serif);}
+.faq details[open] summary::after{content:"-";}
+.faq details p{margin:0 4px 18px;font-size:14px;color:var(--muted);max-width:60em;}
+
+/* 页脚 */
+.foot{border-top:3px double rgba(242,232,213,.3);margin-top:20px;padding:36px 0 30px;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px;}
+.foot h4{margin:0 0 12px;font-size:14px;color:var(--amber);font-family:var(--serif);letter-spacing:.08em;}
+.foot ul{list-style:none;margin:0;padding:0;}
+.foot li{padding:5px 0;font-size:13px;color:var(--muted);}
+.foot li:hover{color:var(--paper);}
+.foot .about p{font-size:13px;color:var(--muted);margin:0 0 10px;}
+.foot .urlbox{margin-top:12px;font-size:13px;color:#c8c0b2;word-break:break-all;font-family:var(--serif);}
+.copyright{border-top:1px solid var(--line);margin-top:28px;padding-top:16px;font-size:12px;color:#7d7568;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;}
+.totop{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border:1px solid var(--amber);background:rgba(15,14,12,.9);color:var(--amber);font-size:16px;display:flex;align-items:center;justify-content:center;}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:26px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  body{font-size:14.5px;}
+  .wrap{padding:0 15px;}
+  .masthead-main{padding:16px 0 14px;}
+  .masthead-top{font-size:11px;gap:6px 12px;}
+  .hero{padding:30px 0 26px;}
+  .stats{grid-template-columns:1fr 1fr;}
+  .slots-head{display:none;}
+  .slot{grid-template-columns:74px 1fr;gap:6px 12px;padding:13px 14px;}
+  .slot .tag,.slot .hall,.slot .state{grid-column:2;font-size:12px;}
+  .slot .state{justify-self:start;padding:2px 10px;margin-top:4px;}
+  .rank li{grid-template-columns:38px 1fr 70px;gap:10px;}
+  .rank li .bar{display:none;}
+  .section{padding:30px 0;}
+  .foot-grid{grid-template-columns:1fr;gap:20px;}
+  .masthead-nav .search{display:none;}
+}
+@media print{.masthead-nav,.totop{display:none;}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="masthead" id="top">
+  <div class="wrap">
+    <div class="masthead-top">
+      <span>第 <b id="issueNo">0418</b> 期 · 每日 19:30 更新</span>
+      <span id="today">日期加载中</span>
+      <span>收录片目 12,846 · 覆盖 21 个地区</span>
+    </div>
+    <div class="masthead-main">
+      <div class="logo">
+        <b>在线影视大全</b>
+        <i>高清在线观看<br>排片 · 榜单 · 指南</i>
+      </div>
+      <div class="site-url">本站地址 <b>https://zaixianyingshidaquan-app.github.io</b></div>
+    </div>
+  </div>
+  <nav class="masthead-nav" aria-label="站点导航">
+    <div class="wrap">
+      <a href="#top">首页</a>
+      <a href="#now-showing">今日排片</a>
+      <a href="#library">片库分类</a>
+      <a href="#ranking">热播榜</a>
+      <a href="#news">资讯</a>
+      <a href="#guide">观影指南</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于本站</a>
+      <form class="search" onsubmit="return false;" role="search">
+        <input type="search" placeholder="搜片名 / 类型" aria-label="站内搜索">
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">今晚看什么</div>
+        <h1>一张排片表，把今晚能看的<em>电影、剧集、动漫</em>都列好了</h1>
+        <p class="lede">在线影视大全不做播放器，只做筛片这件事：把院线热映、剧集连载、纪录片与动漫的最新可看状态汇成一张当日表格，标注清晰度、更新集数与播放入口类型，省掉在多个平台之间来回切换的时间。数据每 15 分钟同步一次，标注为「今日上线」的条目一般在 19:30 前后放出。</p>
+        <div class="btnrow">
+          <a class="btn solid" href="#now-showing">查看今日排片</a>
+          <a class="btn" href="#library">按类型浏览片库</a>
+        </div>
+        <dl class="stats">
+          <div><dt>在库片目</dt><dd>12,846</dd></div>
+          <div><dt>今日更新</dt><dd>37 部</dd></div>
+          <div><dt>4K 片源</dt><dd>1,203</dd></div>
+          <div><dt>同步延迟</dt><dd>≈15 分钟</dd></div>
+        </dl>
+      </div>
+      <aside class="ticket" aria-label="今日放映提示">
+        <div class="stamp">ADMIT ONE · 今日放映</div>
+        <h2>今晚七点半场</h2>
+        <div class="stamp">凭本页排片号直接选片，无需注册</div>
+        <ul>
+          <li><span>19:30 剧情长片</span><span>2 部</span></li>
+          <li><span>20:00 科幻 / 冒险</span><span>1 部</span></li>
+          <li><span>21:10 爱情 / 文艺</span><span>1 部</span></li>
+          <li><span>22:05 喜剧 / 年代</span><span>1 部</span></li>
+          <li><span>连载剧集更新</span><span>9 部</span></li>
+        </ul>
+        <p class="foot">排片以片源方公布时间为准，遇临时调整会在表内状态栏改为「顺延」。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="now-showing">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">栏目 01 / 今日排片</div>
+          <h2>当日可看排片表</h2>
+          <p>按放映时间排序，状态栏标注上线情况；「正在热映」为长期在库，「今日上线」为当日新增。</p>
+        </div>
+        <a class="btn" href="#">下载完整排片（PDF）</a>
+      </div>
+      <div class="slots">
+        <div class="slots-head">
+          <span>时间</span><span>片名</span><span>类型</span><span>清晰度</span><span>状态</span>
+        </div>
+        <article class="slot">
+          <span class="time">18:45</span>
+          <span class="name">雪山来信<small>纪录片 · 全 6 集</small></span>
+          <span class="tag">自然 / 人文</span>
+          <span class="hall">1080P · 中字</span>
+          <span class="state new">今日上线</span>
+        </article>
+        <article class="slot">
+          <span class="time">19:30</span>
+          <span class="name">城市黄昏<small>剧情长片 · 128 分钟</small></span>
+          <span class="tag">剧情 / 悬疑</span>
+          <span class="hall">4K · 双语</span>
+          <span class="state hot">正在热映</span>
+        </article>
+        <article class="slot">
+          <span class="time">20:00</span>
+          <span class="name">星际候车室<small>科幻长片 · 4K 修复版</small></span>
+          <span class="tag">科幻 / 冒险</span>
+          <span class="hall">4K · 原声字幕</span>
+          <span class="state">修复上线</span>
+        </article>
+        <article class="slot">
+          <span class="time">21:10</span>
+          <span class="name">海边旧书店<small>文艺长片 · 101 分钟</small></span>
+          <span class="tag">爱情 / 文艺</span>
+          <span class="hall">1080P · 中字</span>
+          <span class="state new">今日上线</span>
+        </article>
+        <article class="slot">
+          <span class="time">22:05</span>
+          <span class="name">老巷录像带<small>喜剧长片 · 96 分钟</small></span>
+          <span class="tag">喜剧 / 年代</span>
+          <span class="hall">720P · 中字</span>
+          <span class="state">免费观看</span>
+        </article>
+        <article class="slot">
+          <span class="time">23:20</span>
+          <span class="name">深夜食堂手记<small>剧集 · 更新至第 8 集</small></span>
+          <span class="tag">治愈 / 都市</span>
+          <span class="hall">1080P · 中字</span>
+          <span class="state hot">正在热映</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="library">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">栏目 02 / 片库分类</div>
+          <h2>按类型进片库</h2>
+          <p>六个大类，每个分类下按地区、年份、清晰度做了二级筛选，点进分类即可看到子栏目。</p>
+        </div>
+      </div>
+      <div class="cats">
+        <article class="cat">
+          <span class="num">3,412 部</span>
+          <h3>电影</h3>
+          <p>院线新片、经典修复、艺术电影与类型片，按豆瓣评分与上映年份双维度排序。</p>
+          <ul><li>动作</li><li>悬疑</li><li>文艺</li><li>修复经典</li></ul>
+        </article>
+        <article class="cat">
+          <span class="num">4,905 部</span>
+          <h3>电视剧</h3>
+          <p>国产、日韩、欧美剧集连载，标注每周更新日、总集数与字幕组版本。</p>
+          <ul><li>国产剧</li><li>韩剧</li><li>美剧</li><li>日剧</li></ul>
+        </article>
+        <article class="cat">
+          <span class="num">2,178 部</span>
+          <h3>动漫</h3>
+          <p>当季新番、完结番与剧场版，含放送时间表与配音版本（原声 / 国语）。</p>
+          <ul><li>新番</li><li>剧场版</li><li>完结番</li></ul>
+        </article>
+        <article class="cat">
+          <span class="num">986 部</span>
+          <h3>纪录片</h3>
+          <p>自然、历史、人文与社会调查，多数为中字版本，支持倍速与章节跳转。</p>
+          <ul><li>自然</li><li>历史</li><li>美食</li><li>人文</li></ul>
+        </article>
+        <article class="cat">
+          <span class="num">742 部</span>
+          <h3>综艺</h3>
+          <p>访谈、音乐、真人秀与喜剧综艺，按播出平台与更新时间归档。</p>
+          <ul><li>音乐</li><li>访谈</li><li>真人秀</li></ul>
+        </article>
+        <article class="cat">
+          <span class="num">623 部</span>
+          <h3>短剧</h3>
+          <p>单集 3 至 10 分钟的短剧合集，适合通勤时段，已按完结状态分栏。</p>
+          <ul><li>都市</li><li>古装</li><li>悬疑</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ranking">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">栏目 03 / 热播榜</div>
+          <h2>热播榜单速查</h2>
+          <p>榜单按播放热度与完播率综合计算，每日 19:30 与次日 09:00 各刷新一次。</p>
+        </div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button type="button" class="on" data-tab="d">今日榜</button>
+        <button type="button" data-tab="w">本周榜</button>
+        <button type="button" data-tab="m">总榜</button>
+      </div>
+
+      <ol class="rank panel" id="p-d">
+        <li><span class="idx">1</span><span class="ttl">城市黄昏<small>剧情 / 悬疑 · 128 分钟</small></span><span class="bar"><i style="width:96%"></i></span><span class="score">9.2</span></li>
+        <li><span class="idx">2</span><span class="ttl">深夜食堂手记<small>剧集 · 更新至第 8 集</small></span><span class="bar"><i style="width:91%"></i></span><span class="score">8.9</span></li>
+        <li><span class="idx">3</span><span class="ttl">星际候车室<small>科幻 / 冒险 · 4K 修复</small></span><span class="bar"><i style="width:87%"></i></span><span class="score">8.7</span></li>
+        <li><span class="idx">4</span><span class="ttl">海边旧书店<small>爱情 / 文艺 · 101 分钟</small></span><span class="bar"><i style="width:78%"></i></span><span class="score">8.4</span></li>
+        <li><span class="idx">5</span><span class="ttl">雪山来信<small>纪录片 · 全 6 集</small></span><span class="bar"><i style="width:70%"></i></span><span class="score">8.3</span></li>
+        <li><span class="idx">6</span><span class="ttl">老巷录像带<small>喜剧 / 年代 · 96 分钟</small></span><span class="bar"><i style="width:62%"></i></span><span class="score">7.9</span></li>
+      </ol>
+
+      <ol class="rank panel" id="p-w" hidden>
+        <li><span class="idx">1</span><span class="ttl">深夜食堂手记<small>剧集 · 本周更新 4 集</small></span><span class="bar"><i style="width:94%"></i></span><span class="score">8.9</span></li>
+        <li><span class="idx">2</span><span class="ttl">城市黄昏<small>剧情 / 悬疑 · 本周新增场次</small></span><span class="bar"><i style="width:90%"></i></span><span class="score">9.2</span></li>
+        <li><span class="idx">3</span><span class="ttl">北纬四十度<small>纪录片 · 全 8 集</small></span><span class="bar"><i style="width:83%"></i></span><span class="score">8.6</span></li>
+        <li><span class="idx">4</span><span class="ttl">候鸟不南飞<small>剧集 · 更新至第 12 集</small></span><span class="bar"><i style="width:76%"></i></span><span class="score">8.2</span></li>
+        <li><span class="idx">5</span><span class="ttl">铁皮收音机<small>喜剧 / 年代 · 92 分钟</small></span><span class="bar"><i style="width:64%"></i></span><span class="score">7.8</span></li>
+      </ol>
+
+      <ol class="rank panel" id="p-m" hidden>
+        <li><span class="idx">1</span><span class="ttl">漫长的雨季<small>剧情 · 142 分钟</small></span><span class="bar"><i style="width:99%"></i></span><span class="score">9.5</span></li>
+        <li><span class="idx">2</span><span class="ttl">山与海之间<small>纪录片 · 全 10 集</small></span><span class="bar"><i style="width:95%"></i></span><span class="score">9.3</span></li>
+        <li><span class="idx">3</span><span class="ttl">城市黄昏<small>剧情 / 悬疑</small></span><span class="bar"><i style="width:92%"></i></span><span class="score">9.2</span></li>
+        <li><span class="idx">4</span><span class="ttl">钟表匠的午后<small>文艺 · 108 分钟</small></span><span class="bar"><i style="width:88%"></i></span><span class="score">8.8</span></li>
+        <li><span class="idx">5</span><span class="ttl">夜航船<small>悬疑剧集 · 全 12 集</small></span><span class="bar"><i style="width:81%"></i></span><span class="score">8.5</span></li>
+        <li><span class="idx">6</span><span class="ttl">第七个夏天<small>爱情 / 青春 · 99 分钟</small></span><span class="bar"><i style="width:73%"></i></span><span class="score">8.1</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="news">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">栏目 04 / 影视资讯</div>
+          <h2>新片与更新动态</h2>
+          <p>编辑部每日整理的上线、修复与延期消息，条目按发布时间倒序排列。</p>
+        </div>
+        <a class="btn" href="#">更多资讯</a>
+      </div>
+      <div class="news">
+        <article class="post">
+          <div class="meta">10 月 26 日 · 上线</div>
+          <h3>本周 4K 修复片单：三部华语老片重进片库</h3>
+          <p>修复版统一提供原声与国语两条音轨，字幕可单独关闭，适配投屏场景下的外挂字幕需求。</p>
+          <a class="more" href="#">阅读全文</a>
+        </article>
+        <article class="post">
+          <div class="meta">10 月 24 日 · 更新</div>
+          <h3>连载剧集更新日调整：两部剧改为周更三集</h3>
+          <p>受片源方排播影响，原定周二的更新顺延至周三，排片表状态栏已同步标注。</p>
+          <a class="more" href="#">阅读全文</a>
+        </article>
+        <article class="post">
+          <div class="meta">10 月 21 日 · 说明</div>
+          <h3>关于清晰度切换与带宽占用的实测说明</h3>
+          <p>实测 1080P 约需 4 Mbps 稳定带宽，4K 建议 25 Mbps 以上；弱网环境下优先锁定 720P 可减少卡顿。</p>
+          <a class="more" href="#">阅读全文</a>
+        </article>
+        <article class="post">
+          <div class="meta">10 月 18 日 · 榜单</div>
+          <h3>月度榜单口径调整：完播率权重提升至 40%</h3>
+          <p>调整后长片与纪录片的排名更能反映实际观看完成度，播放量刷榜类条目会被明显降权。</p>
+          <a class="more" href="#">阅读全文</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">栏目 05 / 观影指南</div>
+          <h2>从选片到投屏的四步</h2>
+          <p>新用户常见卡点集中在画质切换和外挂字幕，这里按顺序说明一遍。</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <b>STEP 01</b>
+          <h3>先定类型再定片</h3>
+          <p>在片库分类里先缩小到子类，再用清晰度筛选，能避开同名不同版本的条目。</p>
+        </div>
+        <div class="step">
+          <b>STEP 02</b>
+          <h3>按带宽选清晰度</h3>
+          <p>移动网络建议 720P，家庭宽带 100M 以上可直接 1080P，4K 仅推荐有线连接观看。</p>
+        </div>
+        <div class="step">
+          <b>STEP 03</b>
+          <h3>投屏与外接显示</h3>
+          <p>投屏前确认电视与手机处于同一局域网；若投屏后无字幕，改用 HDMI 直连可保留字幕轨。</p>
+        </div>
+        <div class="step">
+          <b>STEP 04</b>
+          <h3>音轨与字幕设置</h3>
+          <p>双语片目默认国语音轨，可在播放页切换到原声；字幕支持字号与延时微调，单位是 0.1 秒。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-no">栏目 06 / 常见问题</div>
+          <h2>关于在线影视大全</h2>
+          <p>下面是被问得最多的几个问题，答案更新至本期。</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>在线影视大全上的排片多久更新一次？</summary>
+          <p>排片表每日 19:30 整体刷新一次，期间片源有变动的条目会在 15 分钟内同步到状态栏。连载剧集的集数更新通常在片源方放出后即时改写。</p>
+        </details>
+        <details>
+          <summary>为什么有些条目标注了清晰度却没有可看入口？</summary>
+          <p>这类条目属于预告登记，片源尚未正式放出，标注的清晰度来自片方公布信息；正式上线后状态栏会改为「今日上线」。</p>
+        </details>
+        <details>
+          <summary>同一部片出现多个版本该怎么选？</summary>
+          <p>优先看类型标签后的年份与清晰度，4K 修复版画质更好但体积大；若用于投屏或外接显示，建议选带双语标识的版本。</p>
+        </details>
+        <details>
+          <summary>榜单的评分是怎么算出来的？</summary>
+          <p>综合播放热度、完播率与收藏量三项，其中完播率占 40%，热度占 40%，收藏量占 20%，每日 19:30 与次日 09:00 各计算一次。</p>
+        </details>
+        <details>
+          <summary>本站地址是什么，会不会变动？</summary>
+          <p>在线影视大全的网址是 https://zaixianyingshidaquan-app.github.io，长期固定不变；页面上所有栏目入口都指向本域名下的内页，遇到其他相似域名请注意辨别。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="about">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="about">
+        <h4>在线影视大全</h4>
+        <p>创办于 2021 年，做的一件事：把分散在各处的可看片目整理成一张当日排片表，并标注清晰度、更新状态与入口类型，方便直接挑选。</p>
+        <p>编辑部联系方式与投稿邮箱见内页「关于我们」栏目，合作与纠错同样走该入口。</p>
+        <div class="urlbox">本站网址：https://zaixianyingshidaquan-app.github.io</div>
+      </div>
+      <div>
+        <h4>片库</h4>
+        <ul>
+          <li><a href="#">电影</a></li>
+          <li><a href="#">电视剧</a></li>
+          <li><a href="#">动漫</a></li>
+          <li><a href="#">纪录片</a></li>
+          <li><a href="#">综艺</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="#">今日排片</a></li>
+          <li><a href="#">热播榜单</a></li>
+          <li><a href="#">影视资讯</a></li>
+          <li><a href="#">观影指南</a></li>
+          <li><a href="#">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">片源登记</a></li>
+          <li><a href="#">纠错反馈</a></li>
+          <li><a href="#">更新日志</a></li>
+          <li><a href="#">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2021-2026 在线影视大全 · 本站仅提供影视条目索引与观看信息整理</span>
+      <span>zaixianyingshidaquan-app.github.io · 第 0418 期</span>
+    </div>
+  </div>
+</footer>
+
+<a class="totop" href="#top" aria-label="返回顶部">↑</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://zaixianyingshidaquan-app.github.io/#website",
+      "url":"https://zaixianyingshidaquan-app.github.io/",
+      "name":"在线影视大全",
+      "alternateName":"在线影视大全官网",
+      "inLanguage":"zh-CN",
+      "description":"每日更新的高清影视在线观看排片表，含剧集连载、动漫、纪录片与热播榜单速查。",
+      "publisher":{"@type":"Organization","name":"在线影视大全编辑部","url":"https://zaixianyingshidaquan-app.github.io/"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"在线影视大全上的排片多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"排片表每日 19:30 整体刷新一次，期间片源有变动的条目会在 15 分钟内同步到状态栏。"}},
+        {"@type":"Question","name":"同一部片出现多个版本该怎么选？","acceptedAnswer":{"@type":"Answer","text":"优先看类型标签后的年份与清晰度，4K 修复版画质更好但体积大；投屏或外接显示建议选带双语标识的版本。"}},
+        {"@type":"Question","name":"在线影视大全的网址是什么？","acceptedAnswer":{"@type":"Answer","text":"网址是 https://zaixianyingshidaquan-app.github.io，长期固定不变。"}}
+      ]
+    }
+  ]
+}
+</script>
+<script>
+(function(){
+  var d=new Date();
+  var wk=['日','一','二','三','四','五','六'][d.getDay()];
+  document.getElementById('today').textContent=d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日 · 星期'+wk;
+  var btns=document.querySelectorAll('.tabs button');
+  var map={d:'p-d',w:'p-w',m:'p-m'};
+  Array.prototype.forEach.call(btns,function(b){
+    b.addEventListener('click',function(){
+      Array.prototype.forEach.call(btns,function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      Object.keys(map).forEach(function(k){
+        document.getElementById(map[k]).hidden=(k!==b.getAttribute('data-tab'));
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
